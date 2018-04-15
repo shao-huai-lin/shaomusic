@@ -66,16 +66,13 @@
 
 <script type="text/javascript">
     $(document).on("click",".menu_check",function(){
-        var id = $(this).attr("id");//获取选中的多选框id
-        var bool =  $(this).prop("checked");
-        $(".menu_check").each(function(){//遍历多选框,找到pid是id的标签
-            var pid = $(this).attr("pid");
-            if(pid == id){
-                if(bool){
-                    $(this).prop("checked",true);
-                }else{
-                    $(this).prop("checked",false);
-                }
+        var that = this;//防止于下面的this混淆
+        $(".menu_check").each(function(){//遍历多选框
+            if($(this).attr("pid") == $(that).attr("id")){//后代
+                this.checked = that.checked;
+            }
+            if($(this).attr("id") == $(that).attr("pid")){//父亲
+                this.checked = true;
             }
         });
     });
