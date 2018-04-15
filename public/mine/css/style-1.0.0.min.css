@@ -1,0 +1,223 @@
+/*自定义滚动条*/
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 3px;
+    height: 3px;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    /*background-color: rgba();*/
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:#00aeef;
+}
+/*form-control 最小尺寸*/
+input[type=date].input-s,
+input[type=time].input-s,
+input[type=month].input-s{
+	line-height: normal;
+}
+.input-s{
+	height: inherit;
+	padding: 3px;
+	line-height:normal;
+}
+/*自定义滚动条*/
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #edf0f5;
+	font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+}
+ul{list-style: none;}
+table{margin-bottom: 60px !important;}
+.nav-tabs>li>a{
+	color:#edf0f5;
+}
+.nav-tabs>li>a:focus,
+.nav-tabs>li>a:hover{
+color: #23527c;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+	background-color: #edf0f5;
+}
+.s_header{
+	background-color: #666;
+	height: 62px;
+}
+.s_header .h_title{
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding-left: 20px;
+}
+.s_header .h_title span{
+	font-size: 20px;
+	margin-left: 10px;
+}
+.s_header .h_title .logo{
+	width: 30px;height: 30px;
+}
+.s_header .h_title a.logout{color:#999999;}
+
+.s_header .h_nav{padding-top: 20px;}
+.s_header .h_nav .nav{height: 42px;}
+.s_header .h_nav .nav li{
+	float: right;
+	z-index: 200;
+}
+
+.s_footer{
+	position: fixed;
+	bottom: 0px;
+	padding: 10px 5px;
+	text-align: left;
+	color: #666;
+	font-size: 12px;
+}
+.s_nav{
+	position: absolute;
+    left: 0px;
+    top: 72px;
+    width: 200px;
+    /*min-height:600px;*/
+    padding-left: 5px;
+    z-index: 1000;
+}
+.s_nav a{
+	display: block;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 16px;
+    background-size: 15px;
+    background-color: #fff;
+    color: #666;
+    overflow: hidden;
+}
+.s_nav .n_branch{
+	margin-bottom: 20px;
+}
+.s_nav .n_branch .b_item{
+	position: relative;
+}
+.s_nav .n_branch .b_item .i_default a{
+    border-left: solid #666666;
+}
+.s_nav a:hover{
+	background-color: #f4f4f4;
+	color: #ffc000;
+}
+.s_nav .n_branch .b_item:hover .b_section{
+	visibility: visible;
+}
+.s_nav .n_branch .b_item .b_section{
+	position: absolute;
+	width: 200px;
+	top: 0px;
+	left: 200px;
+	margin-left: -5px;
+	border:1px solid #e8e8e8;
+	border-radius: 2px;
+	visibility: hidden;
+}
+.s_nav .s_type {
+	background-color: #fff;
+	border-top: 1px solid #e8e8e8;
+}
+.s_nav .s_type .t_title span{
+	text-align: center;
+    padding: 5px;
+    display: block;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #f4f4f4;
+}
+.s_nav .s_type .t_list .l_item {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.s_nav .s_type .t_list .not-border{
+	border:none;
+}
+.s_nav .s_type .t_list .l_item .i_lable{margin-left: 6px;}
+
+.s_wrapper{
+	position: absolute;
+	left: 200px;
+	right: 5px;
+	top: 72px;
+	margin-left: 5px;
+	min-height: -webkit-calc(100% - 72px);
+	min-height: calc(100% - 72px);
+	background-color: #fff;
+}
+.s_wrapper .w_content{
+    margin: 10px 5px 5px 5px;	
+}
+.s_wrapper .w_content .c_level{
+	font-size: 10px;
+    font-family: inherit;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 5px;
+}
+.s_wrapper .w_content .c_operate{
+	margin: 12px;
+    display: flex;
+    align-items: center;
+}
+.s_wrapper .w_content .c_operate .l_title {
+	font-size: 24px;
+    margin-right: 16px;
+    padding-left: 12px;
+    border-left: 3px solid #ffc000;
+    color: #666666;
+    font-weight: 600;
+}
+.s_wrapper .w_content .c_operate .btn_addnew {
+	display: block;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius:16px;
+	background-color: #ffc000;
+	color: #fff;
+	margin-right: 16px;
+}
+.s_wrapper .w_content .c_operate .input-group{
+	width: 200px;
+	margin-right: 16px;
+}
+.c_table .table_btn{
+	color: #666666!important;
+    padding: 0px 6px 0px 0px;
+    font-weight: 600; 
+}
+.c_table .t_checkbox{
+	width: 20px;
+}
+
+.s_page{
+	border-top: 1px solid #e8e8e8;
+}
+
+a:hover{text-decoration: none;}
+a.active{
+	color: #fff;
+    background-color: #ffc000;
+}
+
