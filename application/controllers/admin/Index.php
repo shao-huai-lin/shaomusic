@@ -1,15 +1,18 @@
 <?php
 /**
-* 后台首页模板
+* 后台框架模板
 */
-class Index extends MY_Controller
+class Index extends Admin_Controller
 {
 	
 	function __construct()
 	{
 		parent::__construct();
-		//$this->check_login_exit();//检查是否登录
 	}
+	/**
+	 * [加载后台框架模板]
+	 * @return [type] [description]
+	 */
 	public function index(){
 		$this->load->view('_layouts/index');
 	}

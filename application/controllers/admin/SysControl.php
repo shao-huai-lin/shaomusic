@@ -2,9 +2,7 @@
 /**
  * 系统管理
  */
-class SysControl extends MY_Controller{
-
-	private static $namespace = 'admin/sys/';
+class SysControl extends Admin_Controller{
 
 	function __construct(){
 		parent::__construct();
@@ -24,7 +22,7 @@ class SysControl extends MY_Controller{
 	 * @return [type] [description]
 	 */
 	public function sys_admin(){
-		$this->layout->view(self::$namespace."sys_admin");
+		$this->layout->view("sys/sys_admin");
 	}
 	/**
 	 * [添加或更新系统用户界面]
@@ -36,7 +34,7 @@ class SysControl extends MY_Controller{
 		$data["info"] = $this->admin_m->get_admin_info_one($data["admin_id"]);
 
 		$data["role"] = $this->role_m->select_info_result("s_role");
-		$this->layout->view(self::$namespace."sys_admin_add",$data);
+		$this->layout->view("sys/sys_admin_add",$data);
 	}
 	/**
 	 * [ajax获取系统用户信息]
@@ -116,7 +114,7 @@ class SysControl extends MY_Controller{
 	 * @return [type] [description]
 	 */
 	public function sys_role(){
-		$this->layout->view(self::$namespace . "sys_role");
+		$this->layout->view("sys/sys_role");
 	}
 	/**
 	 * [角色添加或修改页面]
@@ -128,7 +126,7 @@ class SysControl extends MY_Controller{
 
 		$data["role_id"] = $id;
 		$data["info"] = $this->role_m->get_role_info_one($id);
-		$this->layout->view(self::$namespace . "sys_role_mod",$data);
+		$this->layout->view("sys/sys_role_mod",$data);
 	}
 	/**
 	 * [ajax获取角色信息]
@@ -189,7 +187,7 @@ class SysControl extends MY_Controller{
 	 */
 	public function sys_menu(){
 		$data["info"] = $this->menu_m->get_menu_info();
-		$this->layout->view(self::$namespace . "sys_menu",$data);
+		$this->layout->view("sys/sys_menu",$data);
 	}
 	/**
 	 * [添加菜单页面]
@@ -198,7 +196,7 @@ class SysControl extends MY_Controller{
 	 */
 	public function sys_menu_add($id = 0){
 		$data["menu_pid"] = $id;
-		$this->layout->view(self::$namespace . "sys_menu_mod",$data);
+		$this->layout->view("sys/sys_menu_mod",$data);
 	}
 	/**
 	 * [修改菜单页面]
@@ -208,7 +206,7 @@ class SysControl extends MY_Controller{
 	public function sys_menu_edit($id = 0){
 		$data["menu_id"] = $id;
 		$data["info"] = $this->menu_m->select_info_row("s_menu",array("menu_id"=>$id));
-		$this->layout->view(self::$namespace . 'sys_menu_mod',$data);
+		$this->layout->view('sys/sys_menu_mod',$data);
 	}
 	/**
 	 * [添加,修改菜单]

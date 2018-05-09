@@ -2,7 +2,7 @@
 /**
 * 
 */
-class Music extends CI_Controller
+class Music extends Portal_Controller
 {
 	
 	function __construct(){
@@ -10,7 +10,8 @@ class Music extends CI_Controller
 		$this->load->helper('url');
 	}
 	public function index($id=0){
-		$this->load->view('portal/music/index');
+		$data['id'] = $id;
+		$this->load->view('music/index',$data);
 	}
 }
 ?>

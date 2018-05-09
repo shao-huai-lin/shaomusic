@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title>Ui</title>
+		<script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+		<script src="layer.js"></script>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<button id="btn">点我</button>
+		<button id="btn2">点我</button>
+	</body>
+	<script>
+		$("#btn").click(function(){
+			layer.alert("看见我了吗？");
+		});
+		
+		$("#btn2").click(function(){
+			layer.open({
+				type:2,
+				area:['400px','50%'],
+				content:'http://www.baidu.com'
+			});
+		});
+		
+	</script>
+</html>

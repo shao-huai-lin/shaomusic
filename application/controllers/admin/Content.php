@@ -1,10 +1,9 @@
 <?php
 /**
-* 
+* 内容管理
 */
-class Content extends MY_Controller
+class Content extends Admin_Controller
 {
-	private static $namespace = 'admin/content/';
 	
 	function __construct()
 	{
@@ -24,7 +23,7 @@ class Content extends MY_Controller
 	public function classed($type = 1){
 		$data["type"] = $type;
 		$data["info"] = $this->admin_m->select_info_result("s_class",array("class_type"=>$type));
-		$this->layout->view(self::$namespace . "con_classed",$data);
+		$this->layout->view("content/con_classed",$data);
 	}
 	/**
 	 * [栏目的添加和修改]
@@ -65,7 +64,7 @@ class Content extends MY_Controller
 	 */
 	public function music(){
 		$data['classed'] = $this->admin_m->select_info_result('s_class',array('class_type'=>1));
-		$this->layout->view(self::$namespace . "con_music",$data);
+		$this->layout->view("content/con_music",$data);
 	}
 	/**
 	 * [音乐添加和修改页面]
@@ -76,7 +75,7 @@ class Content extends MY_Controller
 		$data['id'] = $id;
 		$data['classed'] = $this->admin_m->select_info_result("s_class",array("class_type"=>1));
 		$data['info'] = $this->music_m->get_music_one($id);
-		$this->layout->view(self::$namespace . "con_music_mod",$data);
+		$this->layout->view("content/con_music_mod",$data);
 	}
 	/**
 	 * [ajax 获取音乐信息]
@@ -132,7 +131,7 @@ class Content extends MY_Controller
 	 */
 	public function special(){
 		$data['classed'] = $this->admin_m->select_info_result('s_class',array("class_type"=>3));
-		$this->layout->view(self::$namespace . "con_special",$data);
+		$this->layout->view("content/con_special",$data);
 	}
 	/**
 	 * [专辑添加和修改页面]
@@ -143,10 +142,10 @@ class Content extends MY_Controller
 		$data["id"] = $id;
 		$data["classed"] = $this->admin_m->select_info_result("s_class",array("class_type"=>3));
 		$data["info"] = $this->special_m ->get_special_one($id);
-		$this->layout->view(self::$namespace . "con_special_mod",$data);
+		$this->layout->view("content/con_special_mod",$data);
 	}
 	public function special_tab(){
-		$this->layout->view(self::$namespace . 'con_special_tab');
+		$this->layout->view('content/con_special_tab');
 	}
 	/**
 	 * [ajax获取专辑信息]
@@ -192,7 +191,7 @@ class Content extends MY_Controller
 	 */
 	public function singer(){
 		$data['classed'] = $this->admin_m->select_info_result('s_class',array("class_type"=>2));
-		$this->layout->view(self::$namespace . "con_singer",$data);
+		$this->layout->view("content/con_singer",$data);
 	}
 	/**
 	 * [歌手添加和修改页面]
@@ -203,10 +202,10 @@ class Content extends MY_Controller
 		$data["id"] = $id;
 		$data["classed"] = $this->admin_m->select_info_result("s_class",array("class_type"=>2));
 		$data["info"] = $this->admin_m->select_info_row("s_singer",array("singer_id"=>$id));
-		$this->layout->view(self::$namespace . "con_singer_mod",$data);
+		$this->layout->view("content/con_singer_mod",$data);
 	}
 	public function singer_tab(){
-		$this->layout->view(self::$namespace . "con_singer_tab");
+		$this->layout->view("content/con_singer_tab");
 	}
 	/**
 	 * [ajax获取歌手信息列表]
@@ -251,7 +250,7 @@ class Content extends MY_Controller
 	public function tag($type=1){
 		$data["type"] = $type;
 		$data["info"] = $this->admin_m->select_info_result("s_tag",array("tag_type"=>$type));
-		$this->layout->view(self::$namespace . "con_tag" ,$data);
+		$this->layout->view("content/con_tag" ,$data);
 	}
 	/**
 	 * [标签选择列表页面]
@@ -259,7 +258,7 @@ class Content extends MY_Controller
 	 */
 	public function tag_tab(){
 		$data['info'] =  $this->tag_m->get_tag_info();
-		$this->layout->view(self::$namespace . "con_tag_tab",$data);
+		$this->layout->view("content/con_tag_tab",$data);
 	}
 	public function tag_save($tag_id=0){
 		if($_POST){

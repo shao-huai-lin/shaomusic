@@ -41,5 +41,14 @@ class Music_model extends MY_Model
 				->join("s_special","special_id = music_specialid","left")
 				->get("s_music")->row_array();
 	}
+	/**
+	 * [获取ids数组中的音乐]
+	 * @param  array  $ids [description]
+	 * @return [type]      [description]
+	 */
+	public function get_music_ids($ids = array()){
+		if(empty($ids)) return null;
+		return $this->db->where_in('music_id',$ids)->get('s_music')->result_array();
+	}
 }
 ?>

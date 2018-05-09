@@ -2,9 +2,8 @@
 /**
 * 首页
 */
-class Main extends MY_Controller
+class Main extends Admin_Controller
 {
-	private static $namespace = 'admin/main/';
 	
 	function __construct()
 	{
@@ -16,7 +15,7 @@ class Main extends MY_Controller
 		$admin_id = $this->session->user["admin_id"];
 		$user = $this->admin_m->get_admin_ram($admin_id);
 		self::save_user($user);
-		$this->layout->view(self::$namespace . "index");
+		$this->layout->view("main/index");
 	}
 }
 ?>

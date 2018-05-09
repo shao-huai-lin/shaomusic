@@ -9,6 +9,10 @@ define('DEFAULT_TITLE', 'Shao音乐');
 define('DEFAULT_SUBJECT', 'Shao音乐');
 //项目logo
 define('DEFAULT_LOGO', './public/mine/img/luoing.png');
+//前端视图
+define('PORTAL_VIEW_DIR','views/portal/');
+//后端视图
+define('ADMIN_VIEW_DIR','views/admin/');
 
 //每页显示数据
 define('PER_PAGE', 10);

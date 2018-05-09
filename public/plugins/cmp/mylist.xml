@@ -1,0 +1,5 @@
+﻿<list>
+  <m type="" src="music/test.mp3" lrc="lrc/lrc.txt" label="1,MP3音乐测试" />
+  <m type="" src="music/abc.mp3" lrc="" image="music/97352a5ebb962252.jpg"  label="刘德华-慢慢习惯" />
+  <m type="" src="music/test.flv" lrc="" label="2,FLV视频测试" />
+</list>

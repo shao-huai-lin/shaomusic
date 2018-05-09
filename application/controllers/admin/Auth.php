@@ -2,14 +2,13 @@
 /**
 * 登录控制器
 */
-class Auth extends MY_Controller
+class Auth extends Admin_Controller
 {
 	
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->library('layout',array('file'=>'index'));
-		// $this->load->library('pagination');
 		$this->load->library("form_validation");
 		$this->load->helper('form');
 
@@ -44,7 +43,7 @@ class Auth extends MY_Controller
 			}
 		}
 
-		$this->load->view('admin/login',$data);
+		$this->load->view('login',$data);
 	}
 	/**
 	 * [登出]

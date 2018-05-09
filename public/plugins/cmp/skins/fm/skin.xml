@@ -1,0 +1,30 @@
+﻿<skin name="fm" version="4.0" author="Lyric Music" email="web@erduo.in" url="http://www.geci.in/" show_tips="0.1">
+	<!--
+	<list xywh="-45C, -25C, 240, 240" src="win.png" lock="0" display="0" group="B" fade="1" snap="0">
+		<tree xywh="1, 1, 1B, 1B" align="left" size="12" color="#000000, #666666"/>
+		<scrollbar thumb_src="scrollbar_thumb.png"/>
+	</list>
+	-->
+	<lrc xywh="210C, 0C, 250, 200" lock="0" display="1" group="C" shadow="3,45,#000000,0.3,4,4,1,3" fade="1" snap="0">
+		<text xywh="1, 21, 1B, 11B" align="center" font="Arial" color="#ffffff, #ffffff">
+			<kmc show_info="1" size="16" bold="1" align="center, center"/>
+		</text>
+	</lrc>
+	<media xywh="-251C, 48C, 100, 100" lock="0" display="1" group="C" fade="1" snap="0">
+		<video xywh="0, 0, 0B, 0B" show_icon="0" show_buttons="0"/>
+	</media>
+	<console xywh="0C, 0C, 700, 400" src="console.png" lock="1" display="1" group="E" fade="1" snap="0">
+		<bt_play xywh="-140C, 175C, 48, 48" src="bt_play.png" tips="播放,暂停" useHandCursor="true"/>
+		<bt_next xywh="55C, 175C, 48, 48" src="bt_next.png" tips="下一首" useHandCursor="true"/>
+		<bt_list xywh="-10C, 175C, 48, 48" src="bt_list.png" tips="关闭列表,打开列表" useHandCursor="true"/>
+		<bt_random xywh="-75C, 175C, 48, 48" src="bt_random.png" tips="开启随机,关闭随机" useHandCursor="true"/>
+		<bt_mute xywh="-150C, 120C, 20, 20" src="bt_mute.png" hover_volume="0" tips="开启静音,开启声音" useHandCursor="true"/>
+		<bt_more xywh="110C, 175C, 24, 24" src="bt_more.png" link="{_fav}" target="_blank" tips="收藏音乐"/>
+		<bt_link xywh="150C, 175C, 24, 24" src="bt_link.png" link="{_down}" target="_blank" tips="下载音乐"/>
+		<volume xywh="-95C, 120C, 80, 4" thumb_src="volume_thumb.png" track_src="volume_track.png"/>
+		<title xywh="210C, 315R, 200, 30" size="20" color="#ffffff" shadow="2,45,#000000,0.5,4,4,1,3"/>
+		<status xywh="210C, 288R, 100, 18" color="#ffffff" shadow="1,45,#000000,0.5,4,4,1,3"/>
+		<time xywh="20C, 120C, 90, 16" align="center" font="Arial" size="12" color="#535353" shadow="1,90,#000000,0.5,4,4,1,3,true"/>
+		<image xywh="0C, 0C, 240, 240"/>
+	</console>
+</skin>

@@ -2,7 +2,7 @@
 /**
 * 
 */
-class Test extends CI_Controller
+class Test extends Admin_Controller
 {
 	
 	public function index(){

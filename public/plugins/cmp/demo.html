@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的demo</title>
+<base href="http://127.0.0.1/ShaoMusic/">
+<script type="text/javascript" src="public/plugins/cmp/cmp.js"></script>
+<style>
+	.player{
+		width:100%;
+		height:400px;
+	}
+</style>
+<body>
+	<h1>CPM4播放器</h1>
+	<div id="player" class="player">
+		<span>正在加载中...</span>
+	</div>
+	
+	<h1>播放器</h1>
+	<object type="application/x-shockwave-flash" data="public/plugins/cmp/cmp.swf?php=fm" width="100%" height="400px" id="cmp">
+		<param name="flashvars" value="lists=http://127.0.0.1/ShaoMusic/index.php/portal/Cmp/fm?ids=1" />
+	</object>
+</body>
+<script type="text/javascript">
+	// var flashvars = {
+	// 	name:"shao音乐",
+	// 	lists:"mylist.xml",
+	// }
+	// var html = CMP.create("cmp","100%","100%","cmp.swf",flashvars);
+	// document.getElementById("player").innerHTML = html;
+	
+</script>
+</head>
+</html>

@@ -65,6 +65,7 @@
 <script src="./public/plugins/form/jquery.form.js"></script>
 
 <script type="text/javascript">
+    //选择下一级
     $(document).on("click",".menu_check",function(){
         var that = this;//防止于下面的this混淆
         $(".menu_check").each(function(){//遍历多选框

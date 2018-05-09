@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>选择的歌</h1>
+	<object type="application/x-shockwave-flash" data="public/plugins/cmp/cmp.swf?php=fm" width="100%" height="400px" id="cmp">
+		<param name="flashvars" value="lists=<?php echo base_url() . "index.php/portal/Cmp/fm?ids={$id}"?>" />
+	</object>
 </body>
 </html>
