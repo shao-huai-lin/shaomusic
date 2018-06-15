@@ -6,6 +6,8 @@ class MY_Controller extends CI_Controller{
 	
 	function __construct(){
 		parent::__construct();
+		$this->load->helper('url');
+		$this->load->helper("public_functions");//加载公共操作函数
 		header('Content-type:text/html;charset=utf-8;');
 	}
 	/**

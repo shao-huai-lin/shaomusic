@@ -9,8 +9,6 @@ class Admin_Controller extends MY_Controller{
 		$this->load->change_view(ADMIN_VIEW_DIR);//视图地址切换为views/admin/
 
 		$this->load->library('session');
-		$this->load->helper('url');
-		$this->load->helper("public_functions");//加载公共操作函数
 		self::check_login();//检查是否登录
 	}
 	/**

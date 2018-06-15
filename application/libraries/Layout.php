@@ -23,7 +23,7 @@ class Layout{
      **/
     public function view($view, $data=null, $return=false){
         $data['content_for_layout'] = $this->obj->load->view($view,$data,true);
-         if($return){
+        if($return){
             $output = $this->obj->load->view($this->layout,$data, true);
             return $output;
         }else{
